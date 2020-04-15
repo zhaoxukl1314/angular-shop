@@ -1,9 +1,6 @@
-import { Component } from '@angular/core';
-
-interface TopMenu {
-  title: string;
-  link: string;
-}
+import { Component, ViewChild } from '@angular/core';
+import { TopMenu } from './components/scrollable-tab/scrollable-tab.component';
+import { ImageSlider, ImageSliderComponent } from './components/image-slider/image-slider.component';
 
 @Component({
   selector: 'app-root',
@@ -12,8 +9,10 @@ interface TopMenu {
 })
 
 export class AppComponent {
-  title = '呵呵哒';
-  menus: TopMenu[] = [{
+  // @ViewChild('imageSlider') imgSlider: ImageSliderComponent;
+  @ViewChild('imageSlider', {static: true}) imgSlider: ImageSliderComponent;
+
+  topMenus: TopMenu[] = [{
     title: '热门',
     link: ''
   }, {
@@ -65,4 +64,17 @@ export class AppComponent {
     title: '家具',
     link: ''
   }];
+
+  imageSliders: ImageSlider[] = [{
+    imgUrl: 'http://a3.att.hudong.com/14/75/01300000164186121366756803686.jpg',
+    link: 'http://a3.att.hudong.com/14/75/01300000164186121366756803686.jpg',
+    caption: '呵呵'
+  },{
+    imgUrl: 'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3477690378,3105703100&fm=26&gp=0.jpg',
+    link: 'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3477690378,3105703100&fm=26&gp=0.jpg',
+    caption: '呵呵1'
+  }];
+  handleTabSelected(topMenu: TopMenu) {
+    console.log(topMenu);
+  }
 }
