@@ -41,6 +41,5 @@ export class ImageSliderComponent implements OnInit, AfterViewInit, OnDestroy {
   handleScroll(event) {
     const ratio = event.target.scrollLeft * this.sliders.length / event.target.scrollWidth;
     this.selectedIndex = Math.round(ratio);
-    console.log(this.selectedIndex);
   }
 }

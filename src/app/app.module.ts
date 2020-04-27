@@ -3,17 +3,16 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { ScrollableTabComponent } from './components/scrollable-tab/scrollable-tab.component';
-import { ImageSliderComponent } from './components/image-slider/image-slider.component';
-import { HorizontalGridComponent } from './components/horizontal-grid/horizontal-grid.component';
 import { SharedModule } from './shared/shared.module';
+import { AppRoutingModule } from './app-routing.module';
+import { HomeModule } from './home/home.module';
 
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
-    BrowserModule, FormsModule, SharedModule
+    BrowserModule, FormsModule, SharedModule, AppRoutingModule, HomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
