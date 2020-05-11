@@ -3,6 +3,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export interface TopMenu {
   title: string;
   link: string;
+  id: number;
 }
 
 @Component({
