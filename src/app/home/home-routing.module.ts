@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeContainerComponent } from './components/home-container/home-container.component';
 import { HomeDetailComponent } from './components/home-detail/home-detail.component';
 import { HomeGrandComponent } from './components/home-grand/home-grand.component';
+import { ParentComponent } from './components/parent/parent.component';
 
 const routes: Routes = [{
   path: 'home',
@@ -24,6 +25,10 @@ const routes: Routes = [{
       ]
     }
   ]
+}, {
+  path: 'change-detection',
+  pathMatch: 'full',
+  component: ParentComponent
 }];
 
 @NgModule({
